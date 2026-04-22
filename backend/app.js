@@ -20,7 +20,7 @@ mongoose
     console.error('❌ Database connection error:', err);
   });
 
-app.get('/tervehdys', async (req, res) => {
+app.get('/api/tervehdys', async (req, res) => {
   try {
     const tervehdykset = await Test.find();
     res.json(tervehdykset);
