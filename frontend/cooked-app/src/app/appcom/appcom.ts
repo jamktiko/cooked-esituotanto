@@ -7,11 +7,12 @@ import { Dataservice } from '../dataservice';
   template: `
 <h1>Backend Data</h1>
 <div>
-  @if (items()) {
-    <p>{{ items() }}</p>
-  } @else {
-    <p>Ladataan...</p>
-  }
+<div>
+      @for (item of items(); track item.id) {
+        <p>{{ item.tervehdys }}</p>
+      } @empty {
+        <p>Ei löytynyt dataa.</p>
+      }
 </div>
   `
 })

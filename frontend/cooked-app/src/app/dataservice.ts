@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class Dataservice {
   private http = inject(HttpClient);
-  private apiurl = 'http://cooked-env.eba-tss6xgib.eu-north-1.elasticbeanstalk.com/';
-  getItems(): Observable<string> {
-    return this.http.get(this.apiurl, { responseType: 'text' });
+  private apiurl = 'http://cooked-env.eba-tss6xgib.eu-north-1.elasticbeanstalk.com/tervehdys';
+  getItems(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiurl);
   }
 }
