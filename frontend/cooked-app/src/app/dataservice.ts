@@ -8,7 +8,7 @@ import { environment } from '../environments/environment'
 })
 export class Dataservice {
   private http = inject(HttpClient);
-  private apiurl = `${environment.apiurl}/tervehdys`;
+  private apiurl = `${environment.apiurl}/api/tervehdys`;
   getItems(): Observable<any[]> {
     return this.http.get<any[]>(this.apiurl);
   }
