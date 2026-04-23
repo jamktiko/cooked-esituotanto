@@ -45,7 +45,6 @@ app.get('/api/get-upload-url', async (req, res) => {
     res.json({
       uploadUrl: signedUrl,
       key: `test-uploads/${fileName}`,
-      // Ja muista päivittää myös tämä URL-rakenne:
       imageUrl: `https://${process.env.S3_BUCKET_NAME}.s3.${process.env.AWS_REGION}.amazonaws.com/test-uploads/${fileName}`,
     });
   } catch (err) {
